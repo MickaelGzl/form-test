@@ -23,7 +23,6 @@ function App() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
-    return;
     emailjs
       .sendForm(env.VITE_EMAIL_SERVICE_ID, env.VITE_EMAIL_TEMPLATE_ID, form, {
         publicKey: env.VITE_EMAIL_API_KEY,
